@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Trabajo() {
   return (
-    <section id="trabajo" className="py-20 bg-[#F5DEB3]">
+    <section className="py-20 bg-[#F5DEB3]">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-primary mb-12 text-center">Nuestro Trabajo</h2>
 

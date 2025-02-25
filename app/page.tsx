@@ -1,19 +1,13 @@
 import Inicio from "../components/Inicio"
-import ElEstudio from "../components/ElEstudio"
-import NuestrosServicios from "../components/NuestrosServicios"
-import Trabajo from "../components/Trabajo"
-import Contacto from "../components/Contacto"
 import Navegacion from "../components/Navegacion"
+import Filosofia from "../components/Filosofia"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#F5DEB3]">
+    <main className="relative overflow-x-hidden">
       <Navegacion />
       <Inicio />
-      <ElEstudio />
-      <NuestrosServicios />
-      <Trabajo />
-      <Contacto />
+      <Filosofia />
     </main>
   )
 }

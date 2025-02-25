@@ -2,17 +2,17 @@ import Image from 'next/image';
 
 export default function ElEstudio() {
   return (
-    <section id="estudio" className="py-20 bg-[#F5DEB3]">
+    <section className="py-20 bg-ocre">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-primary mb-8 text-center">El Estudio</h2>
+        <h2 className="text-4xl font-hand font-bold text-primary mb-10 text-center">El Estudio</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <p className="text-accent mb-4">
+            <p className="text-lg font-hand text-primary mb-6">
               El Totoral es más que un estudio de grabación; es un espacio donde la creatividad florece y la música
               cobra vida. Nuestro estudio está diseñado para proporcionar un ambiente inspirador y acogedor, donde los
               artistas pueden sentirse como en casa mientras dan vida a sus creaciones musicales.
             </p>
-            <p className="text-accent">
+            <p className="text-lg font-hand text-primary">
               Con equipos de última generación y un equipo de profesionales apasionados, estamos comprometidos a ayudar
               a cada artista a alcanzar su máximo potencial sonoro. Ya sea que estés grabando tu primer single o
               trabajando en tu álbum más ambicioso, El Totoral es el lugar donde tu música echará raíces y crecerá.
