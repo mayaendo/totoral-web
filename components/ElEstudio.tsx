@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function ElEstudio() {
   return (
     <section id="estudio" className="py-20 bg-[#F5DEB3]">
@@ -17,26 +19,38 @@ export default function ElEstudio() {
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <img
-              src="/placeholder.svg?height=200&width=200"
-              alt="Estudio Interior 1"
-              className="rounded-lg shadow-lg"
-            />
-            <img
-              src="/placeholder.svg?height=200&width=200"
-              alt="Estudio Interior 2"
-              className="rounded-lg shadow-lg"
-            />
-            <img
-              src="/placeholder.svg?height=200&width=200"
-              alt="Estudio Interior 3"
-              className="rounded-lg shadow-lg"
-            />
-            <img
-              src="/placeholder.svg?height=200&width=200"
-              alt="Estudio Interior 4"
-              className="rounded-lg shadow-lg"
-            />
+            <div className="relative rounded-lg shadow-lg" style={{ height: '200px', width: '100%' }}>
+              <Image
+                src="/placeholder.svg?height=200&width=200"
+                alt="Estudio Interior 1"
+                fill
+                className="rounded-lg object-cover"
+              />
+            </div>
+            <div className="relative rounded-lg shadow-lg" style={{ height: '200px', width: '100%' }}>
+              <Image
+                src="/placeholder.svg?height=200&width=200"
+                alt="Estudio Interior 2"
+                fill
+                className="rounded-lg object-cover"
+              />
+            </div>
+            <div className="relative rounded-lg shadow-lg" style={{ height: '200px', width: '100%' }}>
+              <Image
+                src="/placeholder.svg?height=200&width=200"
+                alt="Estudio Interior 3"
+                fill
+                className="rounded-lg object-cover"
+              />
+            </div>
+            <div className="relative rounded-lg shadow-lg" style={{ height: '200px', width: '100%' }}>
+              <Image
+                src="/placeholder.svg?height=200&width=200"
+                alt="Estudio Interior 4"
+                fill
+                className="rounded-lg object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { Play } from "lucide-react"
+import Image from 'next/image';
 
 export default function Trabajo() {
   return (
@@ -10,30 +11,39 @@ export default function Trabajo() {
           <h3 className="text-2xl font-semibold text-accent mb-6">Proyectos Destacados</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-4 rounded-lg shadow-md">
-              <img
-                src="/placeholder.svg?height=200&width=300"
-                alt="Proyecto 1"
-                className="w-full h-40 object-cover mb-4 rounded"
-              />
-              <h4 className="text-lg font-semibold mb-2">Álbum "Raíces"</h4>
+              <div className="relative w-full h-40 mb-4 rounded">
+                <Image
+                  src="/placeholder.svg?height=200&width=300"
+                  alt="Proyecto 1"
+                  fill
+                  className="object-cover rounded"
+                />
+              </div>
+              <h4 className="text-lg font-semibold mb-2">Álbum &ldquo;Raíces&rdquo;</h4>
               <p className="text-sm text-gray-600">Producción completa del álbum debut de La Banda del Totoral</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-md">
-              <img
-                src="/placeholder.svg?height=200&width=300"
-                alt="Proyecto 2"
-                className="w-full h-40 object-cover mb-4 rounded"
-              />
-              <h4 className="text-lg font-semibold mb-2">EP "Tierra Adentro"</h4>
+              <div className="relative w-full h-40 mb-4 rounded">
+                <Image
+                  src="/placeholder.svg?height=200&width=300"
+                  alt="Proyecto 2"
+                  fill
+                  className="object-cover rounded"
+                />
+              </div>
+              <h4 className="text-lg font-semibold mb-2">EP &ldquo;Tierra Adentro&rdquo;</h4>
               <p className="text-sm text-gray-600">Grabación y mezcla para el artista solista Juan Tierra</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-md">
-              <img
-                src="/placeholder.svg?height=200&width=300"
-                alt="Proyecto 3"
-                className="w-full h-40 object-cover mb-4 rounded"
-              />
-              <h4 className="text-lg font-semibold mb-2">Single "Vuelo de Totora"</h4>
+              <div className="relative w-full h-40 mb-4 rounded">
+                <Image
+                  src="/placeholder.svg?height=200&width=300"
+                  alt="Proyecto 3"
+                  fill
+                  className="object-cover rounded"
+                />
+              </div>
+              <h4 className="text-lg font-semibold mb-2">Single &ldquo;Vuelo de Totora&rdquo;</h4>
               <p className="text-sm text-gray-600">Producción y masterización para el grupo Vientos del Sur</p>
             </div>
           </div>
@@ -58,15 +68,15 @@ export default function Trabajo() {
           <h3 className="text-2xl font-semibold text-accent mb-6">Videos</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-4 rounded-lg shadow-md">
-              <div className="aspect-w-16 aspect-h-9 mb-4">
-                <img src="/placeholder.svg?height=200&width=350" alt="Video 1" className="object-cover rounded" />
+              <div className="relative aspect-w-16 aspect-h-9 mb-4" style={{ height: '200px' }}>
+                <Image src="/placeholder.svg?height=200&width=350" alt="Video 1" fill className="object-cover rounded" />
               </div>
-              <h4 className="text-lg font-semibold mb-2">Detrás de escenas: Grabación de "Raíces"</h4>
+              <h4 className="text-lg font-semibold mb-2">Detrás de escenas: Grabación de &ldquo;Raíces&rdquo;</h4>
               <p className="text-sm text-gray-600">Un vistazo al proceso creativo en El Totoral</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-md">
-              <div className="aspect-w-16 aspect-h-9 mb-4">
-                <img src="/placeholder.svg?height=200&width=350" alt="Video 2" className="object-cover rounded" />
+              <div className="relative aspect-w-16 aspect-h-9 mb-4" style={{ height: '200px' }}>
+                <Image src="/placeholder.svg?height=200&width=350" alt="Video 2" fill className="object-cover rounded" />
               </div>
               <h4 className="text-lg font-semibold mb-2">Tour por el estudio</h4>
               <p className="text-sm text-gray-600">Conoce nuestras instalaciones y equipos</p>
@@ -79,14 +89,14 @@ export default function Trabajo() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md">
               <p className="italic mb-4">
-                "El Totoral no solo grabó nuestra música, sino que también capturó nuestra esencia. Un lugar mágico para
-                crear."
+                &ldquo;El Totoral no solo grabó nuestra música, sino que también capturó nuestra esencia. Un lugar mágico para
+                crear.&rdquo;
               </p>
               <p className="font-semibold">- La Banda del Totoral</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
               <p className="italic mb-4">
-                "La experiencia y profesionalismo del equipo hicieron que mi álbum sonara mejor de lo que imaginé."
+                &ldquo;La experiencia y profesionalismo del equipo hicieron que mi álbum sonara mejor de lo que imaginé.&rdquo;
               </p>
               <p className="font-semibold">- Juan Tierra, artista solista</p>
             </div>
