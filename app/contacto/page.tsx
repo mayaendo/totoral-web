@@ -3,7 +3,7 @@ import Navegacion from "../../components/Navegacion";
 
 export default function ContactoPage() {
   return (
-    <main className="min-h-screen bg-secondary">
+    <main className="min-h-screen bg-primary overflow-hidden">
       <Navegacion />
       <Contacto />
     </main>

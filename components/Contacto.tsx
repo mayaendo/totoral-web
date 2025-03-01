@@ -91,7 +91,7 @@ export default function Contacto() {
   };
 
   return (
-    <section className="py-16 bg-primary text-white" id="contacto">
+    <section className="pt-24 md:pt-28 pb-16 bg-primary text-white" id="contacto">
       <div className="container mx-auto px-4 md:px-8">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-lora font-semibold mb-8 text-center">
