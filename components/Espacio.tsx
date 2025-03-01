@@ -38,11 +38,44 @@ export default function Espacio() {
           <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
             <EspacioGallery 
               images={espacioImages} 
-              currentIndex={currentImage} 
-              onPrev={prevImage} 
-              onNext={nextImage} 
-              onSelect={(index) => setCurrentImage(index)} 
+              currentIndex={currentImage}
             />
+            
+            {/* Navigation Arrows */}
+            <div className="absolute inset-0 flex items-center justify-between p-4">
+              <button 
+                onClick={prevImage}
+                className="bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
+                aria-label="Imagen anterior"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button 
+                onClick={nextImage}
+                className="bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
+                aria-label="Siguiente imagen"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+            
+            {/* Image Indicator */}
+            <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+              {espacioImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentImage(index)}
+                  className={`w-2 h-2 rounded-full ${
+                    index === currentImage ? 'bg-yellow' : 'bg-white/50'
+                  }`}
+                  aria-label={`Ir a imagen ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
 
           {/* Description */}

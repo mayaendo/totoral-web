@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 
 export default function Filosofia() {
@@ -41,24 +40,6 @@ export default function Filosofia() {
         marginTop: '-1px', // Ensure no gap at the top
       }}
     >
-      {/* Roots Image as Background - positioned to cover the top part of the section */}
-      <div className="absolute inset-0 w-full" style={{ zIndex: 1, height: '60%' }}>
-        <div className="relative w-full h-full max-w-2xl mx-auto">
-          <Image
-            src="/images/inicio/inicio_raices_marron.png"
-            alt="Raíces de Totora"
-            fill
-            className="object-contain object-top"
-            sizes="100vw"
-            priority
-            style={{ 
-              transform: 'scale(0.7)',
-              transformOrigin: 'top center'
-            }}
-          />
-        </div>
-      </div>
-      
       {/* Semi-transparent overlay to improve text readability */}
       <div className="absolute inset-0 bg-primary opacity-5" style={{ zIndex: 2 }}></div>
 

@@ -34,33 +34,37 @@ export default function NuestrosServicios() {
   ];
 
   return (
-    <section className="pt-24 md:pt-28 pb-20 bg-accent text-white" id="servicios">
+    <section className="pt-24 md:pt-28 pb-20 bg-primary text-white" id="servicios">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-lora font-bold mb-16 text-center text-yellow">Nuestros Servicios</h2>
         
-        <div className="space-y-16">
+        <div className="space-y-12">
           {servicios.map((servicio, index) => (
             <div 
               key={index} 
-              className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-center`}
+              className="bg-primary/50 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-white/10"
             >
-              <div className="w-full md:w-1/2">
-                <div className="relative h-64 md:h-80 w-full overflow-hidden rounded-lg shadow-xl">
-                  <Image
-                    src={servicio.image}
-                    alt={servicio.alt}
-                    fill
-                    className="object-cover"
-                  />
+              <div 
+                className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-center`}
+              >
+                <div className="w-full md:w-1/2">
+                  <div className="relative h-64 md:h-72 w-full overflow-hidden rounded-lg shadow-lg">
+                    <Image
+                      src={servicio.image}
+                      alt={servicio.alt}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
-              </div>
-              
-              <div className="w-full md:w-1/2 space-y-4">
-                <div className="flex items-center gap-4">
-                  {servicio.icon}
-                  <h3 className="text-3xl font-lora font-semibold text-yellow">{servicio.title}</h3>
+                
+                <div className="w-full md:w-1/2 space-y-4">
+                  <div className="flex items-center gap-4">
+                    {servicio.icon}
+                    <h3 className="text-2xl font-lora font-semibold text-yellow">{servicio.title}</h3>
+                  </div>
+                  <p className="font-mono text-sm text-white/80">{servicio.description}</p>
                 </div>
-                <p className="font-mono text-lg leading-relaxed">{servicio.description}</p>
               </div>
             </div>
           ))}

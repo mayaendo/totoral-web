@@ -118,29 +118,26 @@ export default function Inicio() {
         </div>
       </div>
 
-      {/* Contact Button - Bottom Right */}
-      <div className="absolute bottom-8 right-8 z-30">
-        <Link href="/contacto">
-          <button className="bg-yellow text-primary px-6 py-3 rounded-full font-mono text-lg font-bold hover:bg-white transition-colors duration-300 shadow-lg">
-            Contacto
-          </button>
-        </Link>
-      </div>
-
-      {/* Totora Plant Image - Bottom Center */}
-      <div className="absolute bottom-0 left-0 right-0 z-30 flex justify-center">
+      {/* Contact Button - Bottom Right with Totora Plant Image on top */}
+      <div className="absolute bottom-8 right-8 z-30 flex flex-col items-center">
+        {/* Totora Plant Image - Small, directly on top of button */}
         <div 
-          className="cursor-pointer transition-transform hover:scale-105 duration-300"
+          className="cursor-pointer transition-transform hover:scale-105 duration-300 mb-[-10px]"
           onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
         >
           <Image 
             src="/images/inicio/inicio_totora_color.png" 
             alt="Planta de Totora" 
-            width={120} 
-            height={180} 
+            width={40} 
+            height={60} 
             className="object-contain"
           />
         </div>
+        <Link href="/contacto">
+          <button className="bg-yellow text-primary px-6 py-3 rounded-full font-mono text-lg font-bold hover:bg-white transition-colors duration-300 shadow-lg">
+            Contacto
+          </button>
+        </Link>
       </div>
     </section>
   );

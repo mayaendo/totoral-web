@@ -1,6 +1,7 @@
 'use client';
 
 import Navegacion from "../../components/Navegacion";
+import ElEstudio from "../../components/ElEstudio";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -74,16 +75,15 @@ export default function EstudioPage() {
   return (
     <main className="relative overflow-hidden min-h-screen bg-primary">
       <Navegacion />
+      <ElEstudio />
       
-      <div className="pt-24 md:pt-28 pb-8">
-        <h1 className="text-4xl md:text-5xl font-lora text-center text-yellow mb-8">El Estudio</h1>
-        
+      <div className="pb-20 -mt-4">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {galleryItems.map((item, index) => (
               <div 
                 key={index}
-                className="relative aspect-square overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-[1.02] cursor-pointer"
+                className="relative aspect-square overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-[1.02] cursor-pointer bg-primary/50 backdrop-blur-sm border border-white/10"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
@@ -105,14 +105,6 @@ export default function EstudioPage() {
                 )}
               </div>
             ))}
-          </div>
-          
-          <div className="mt-12 max-w-3xl mx-auto text-center text-white">
-            <p className="font-mono text-lg">
-              Nuestro estudio está equipado con tecnología de punta para ofrecer la mejor calidad en grabación, 
-              producción, mezcla y masterización. Un espacio diseñado para potenciar tu creatividad y llevar 
-              tu música al siguiente nivel.
-            </p>
           </div>
         </div>
       </div>
