@@ -127,13 +127,19 @@ export default function Inicio() {
         </Link>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-0 right-0 z-30 flex justify-center animate-bounce">
-        <div className="flex flex-col items-center cursor-pointer" onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}>
-          <p className="text-white font-mono mb-2">Descubre más</p>
-          <svg className="w-6 h-6 text-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
+      {/* Totora Plant Image - Bottom Center */}
+      <div className="absolute bottom-0 left-0 right-0 z-30 flex justify-center">
+        <div 
+          className="cursor-pointer transition-transform hover:scale-105 duration-300"
+          onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
+        >
+          <Image 
+            src="/images/inicio/planta de totora png.png" 
+            alt="Planta de Totora" 
+            width={120} 
+            height={180} 
+            className="object-contain"
+          />
         </div>
       </div>
     </section>
