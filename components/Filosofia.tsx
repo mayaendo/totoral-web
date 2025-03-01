@@ -34,23 +34,23 @@ export default function Filosofia() {
   return (
     <section 
       ref={sectionRef}
-      className="relative bg-primary py-16 text-white overflow-hidden opacity-90 transition-opacity duration-1000"
+      className="relative bg-primary py-10 text-white overflow-hidden opacity-90 transition-opacity duration-1000"
       style={{ 
         marginTop: '-1px', // Ensure no gap at the top
       }}
     >
       {/* Roots Image as Background - positioned to cover the top part of the section */}
-      <div className="absolute inset-0 w-full" style={{ zIndex: 1, height: '70%' }}>
-        <div className="relative w-full h-full max-w-3xl mx-auto">
+      <div className="absolute inset-0 w-full" style={{ zIndex: 1, height: '60%' }}>
+        <div className="relative w-full h-full max-w-2xl mx-auto">
           <Image
-            src="/images/inicio/raices de totora png.png"
+            src="/images/inicio/inicio_raices_marron.png"
             alt="Raíces de Totora"
             fill
             className="object-contain object-top"
             sizes="100vw"
             priority
             style={{ 
-              transform: 'scale(0.8)',
+              transform: 'scale(0.7)',
               transformOrigin: 'top center'
             }}
           />
@@ -58,13 +58,13 @@ export default function Filosofia() {
       </div>
       
       {/* Semi-transparent overlay to improve text readability */}
-      <div className="absolute inset-0 bg-primary opacity-80" style={{ zIndex: 2 }}></div>
+      <div className="absolute inset-0 bg-primary opacity-5" style={{ zIndex: 2 }}></div>
 
       {/* Content positioned over the background */}
-      <div className="container mx-auto px-4 md:px-16 lg:px-24 py-16 relative" style={{ zIndex: 3 }}>
-        <div className="max-w-4xl mx-auto">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-xl md:text-2xl font-lora leading-relaxed">
+      <div className="w-full px-2 py-10 relative" style={{ zIndex: 3 }}>
+        <div className="w-[95%] mx-auto">
+          <div className="w-full text-center">
+            <p className="text-lg md:text-xl font-lora leading-relaxed">
               En <span className="text-yellow">El Totoral</span>, creemos que la música es más que sonido; es una expresión del alma que merece ser capturada con autenticidad y pasión. Nuestro estudio combina <span className="text-yellow">calidad técnica</span>, <span className="text-yellow">ambiente creativo</span> y <span className="text-yellow">colaboración genuina</span> para crear experiencias sonoras que perduran en el tiempo.
             </p>
           </div>

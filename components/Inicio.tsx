@@ -134,7 +134,7 @@ export default function Inicio() {
           onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
         >
           <Image 
-            src="/images/inicio/planta de totora png.png" 
+            src="/images/inicio/inicio_totora_color.png" 
             alt="Planta de Totora" 
             width={120} 
             height={180} 

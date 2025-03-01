@@ -3,102 +3,91 @@ import Image from 'next/image';
 
 export default function Trabajo() {
   return (
-    <section className="py-20 bg-[#F5DEB3]">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-primary mb-12 text-center">Nuestro Trabajo</h2>
+    <section className="pt-24 md:pt-28 pb-20 bg-primary text-white" id="trabajo">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-lora font-bold mb-16 text-center text-yellow">Nuestro Trabajo</h2>
 
         <div className="mb-16">
-          <h3 className="text-2xl font-semibold text-accent mb-6">Proyectos Destacados</h3>
+          <h3 className="text-2xl font-lora font-semibold text-yellow mb-8">Música Producida en El Totoral</h3>
+          <div className="bg-primary/50 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-white/10">
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-6 mb-6">
+              <div className="flex-shrink-0">
+                <Play className="w-12 h-12 text-yellow" />
+              </div>
+              <div>
+                <h4 className="text-xl font-lora font-semibold mb-2">Totoral Music</h4>
+                <p className="font-mono text-white/80">
+                  Una selección de música grabada, mezclada y producida por Lorenzo Tapia & Moncho Berry en El Totoral Studio.
+                  Incluye artistas como Jaze, Temple Sour, Moncho Berry, rulolo, Maya Endo y más.
+                </p>
+              </div>
+            </div>
+            
+            <div className="aspect-auto w-full rounded-lg overflow-hidden shadow-lg">
+              <iframe 
+                src="https://open.spotify.com/embed/playlist/4ZOQDb0bT1n4nmCaJRyPPN?utm_source=generator&theme=0" 
+                width="100%" 
+                height="500" 
+                frameBorder="0" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy"
+                title="Totoral Music Playlist"
+                className="rounded-lg"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-16">
+          <h3 className="text-2xl font-lora font-semibold text-yellow mb-8">Artistas Destacados</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-4 rounded-lg shadow-md">
-              <div className="relative w-full h-40 mb-4 rounded">
-                <Image
-                  src="/placeholder.svg?height=200&width=300"
-                  alt="Proyecto 1"
-                  fill
-                  className="object-cover rounded"
-                />
+            <div className="bg-primary/50 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-white/10">
+              <h4 className="text-xl font-lora font-semibold mb-3 text-yellow">Jaze</h4>
+              <p className="font-mono text-sm mb-4">Colaboración en múltiples proyectos incluyendo "ke será de mí", "Lunares" y "Al Mango"</p>
+              <div className="flex justify-end">
+                <a href="https://open.spotify.com/artist/5kUiVvEXKzJ4y8Yj2zPCDI" target="_blank" rel="noopener noreferrer" className="text-yellow hover:text-white transition-colors font-mono text-sm">
+                  Ver artista →
+                </a>
               </div>
-              <h4 className="text-lg font-semibold mb-2">Álbum &ldquo;Raíces&rdquo;</h4>
-              <p className="text-sm text-gray-600">Producción completa del álbum debut de La Banda del Totoral</p>
             </div>
-            <div className="bg-white p-4 rounded-lg shadow-md">
-              <div className="relative w-full h-40 mb-4 rounded">
-                <Image
-                  src="/placeholder.svg?height=200&width=300"
-                  alt="Proyecto 2"
-                  fill
-                  className="object-cover rounded"
-                />
+            
+            <div className="bg-primary/50 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-white/10">
+              <h4 className="text-xl font-lora font-semibold mb-3 text-yellow">Temple Sour</h4>
+              <p className="font-mono text-sm mb-4">Producción de temas como "La Venenotza", "La Beba", "France$ka" y "Power Reggae"</p>
+              <div className="flex justify-end">
+                <a href="https://open.spotify.com/artist/0Gy0Ov8JLNEJnMyzYgOYJo" target="_blank" rel="noopener noreferrer" className="text-yellow hover:text-white transition-colors font-mono text-sm">
+                  Ver artista →
+                </a>
               </div>
-              <h4 className="text-lg font-semibold mb-2">EP &ldquo;Tierra Adentro&rdquo;</h4>
-              <p className="text-sm text-gray-600">Grabación y mezcla para el artista solista Juan Tierra</p>
             </div>
-            <div className="bg-white p-4 rounded-lg shadow-md">
-              <div className="relative w-full h-40 mb-4 rounded">
-                <Image
-                  src="/placeholder.svg?height=200&width=300"
-                  alt="Proyecto 3"
-                  fill
-                  className="object-cover rounded"
-                />
+            
+            <div className="bg-primary/50 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-white/10">
+              <h4 className="text-xl font-lora font-semibold mb-3 text-yellow">Moncho Berry</h4>
+              <p className="font-mono text-sm mb-4">Artista y productor con temas como "SENTIRME BIEN", "No Soy Yo" y "Antes De Partir"</p>
+              <div className="flex justify-end">
+                <a href="https://open.spotify.com/artist/5Hv2bYBhMp1lUHFri9AxXh" target="_blank" rel="noopener noreferrer" className="text-yellow hover:text-white transition-colors font-mono text-sm">
+                  Ver artista →
+                </a>
               </div>
-              <h4 className="text-lg font-semibold mb-2">Single &ldquo;Vuelo de Totora&rdquo;</h4>
-              <p className="text-sm text-gray-600">Producción y masterización para el grupo Vientos del Sur</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold text-accent mb-6">Canciones / Playlist</h3>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <div className="flex items-center mb-4">
-              <Play className="w-8 h-8 text-primary mr-4" />
-              <span className="text-lg font-semibold">Escucha nuestra selección de trabajos</span>
-            </div>
-            <p className="text-sm text-gray-600 mb-4">Explora una muestra de las canciones producidas en El Totoral</p>
-            {/* Aquí iría un componente de reproductor o un enlace a una playlist externa */}
-            <button className="bg-primary text-white py-2 px-4 rounded hover:bg-secondary transition duration-300">
-              Ver Playlist Completa
-            </button>
-          </div>
-        </div>
-
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold text-accent mb-6">Videos</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-4 rounded-lg shadow-md">
-              <div className="relative aspect-w-16 aspect-h-9 mb-4" style={{ height: '200px' }}>
-                <Image src="/placeholder.svg?height=200&width=350" alt="Video 1" fill className="object-cover rounded" />
-              </div>
-              <h4 className="text-lg font-semibold mb-2">Detrás de escenas: Grabación de &ldquo;Raíces&rdquo;</h4>
-              <p className="text-sm text-gray-600">Un vistazo al proceso creativo en El Totoral</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg shadow-md">
-              <div className="relative aspect-w-16 aspect-h-9 mb-4" style={{ height: '200px' }}>
-                <Image src="/placeholder.svg?height=200&width=350" alt="Video 2" fill className="object-cover rounded" />
-              </div>
-              <h4 className="text-lg font-semibold mb-2">Tour por el estudio</h4>
-              <p className="text-sm text-gray-600">Conoce nuestras instalaciones y equipos</p>
             </div>
           </div>
         </div>
 
         <div>
-          <h3 className="text-2xl font-semibold text-accent mb-6">Testimonios</h3>
+          <h3 className="text-2xl font-lora font-semibold text-yellow mb-8">Testimonios</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <p className="italic mb-4">
-                &ldquo;El Totoral no solo grabó nuestra música, sino que también capturó nuestra esencia. Un lugar mágico para
-                crear.&rdquo;
+            <div className="bg-primary/50 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-white/10">
+              <p className="italic mb-4 font-mono">
+                "El Totoral no solo grabó nuestra música, sino que también capturó nuestra esencia. Un lugar mágico para
+                crear."
               </p>
-              <p className="font-semibold">- La Banda del Totoral</p>
+              <p className="font-lora text-yellow">- Temple Sour</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <p className="italic mb-4">
-                &ldquo;La experiencia y profesionalismo del equipo hicieron que mi álbum sonara mejor de lo que imaginé.&rdquo;
+            <div className="bg-primary/50 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-white/10">
+              <p className="italic mb-4 font-mono">
+                "La experiencia y profesionalismo del equipo hicieron que mi álbum sonara mejor de lo que imaginé."
               </p>
-              <p className="font-semibold">- Juan Tierra, artista solista</p>
+              <p className="font-lora text-yellow">- Mattias</p>
             </div>
           </div>
         </div>
