@@ -1,5 +1,4 @@
 import { Play } from "lucide-react"
-import Image from 'next/image';
 
 export default function Trabajo() {
   return (
@@ -43,7 +42,7 @@ export default function Trabajo() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-primary/50 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-white/10">
               <h4 className="text-xl font-lora font-semibold mb-3 text-yellow">Jaze</h4>
-              <p className="font-mono text-sm mb-4">Colaboración en múltiples proyectos incluyendo "ke será de mí", "Lunares" y "Al Mango"</p>
+              <p className="font-mono text-sm mb-4">Colaboración en múltiples proyectos incluyendo &ldquo;ke será de mí&rdquo;, &ldquo;Lunares&rdquo; y &ldquo;Al Mango&rdquo;</p>
               <div className="flex justify-end">
                 <a href="https://open.spotify.com/artist/5kUiVvEXKzJ4y8Yj2zPCDI" target="_blank" rel="noopener noreferrer" className="text-yellow hover:text-white transition-colors font-mono text-sm">
                   Ver artista →
@@ -53,7 +52,7 @@ export default function Trabajo() {
             
             <div className="bg-primary/50 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-white/10">
               <h4 className="text-xl font-lora font-semibold mb-3 text-yellow">Temple Sour</h4>
-              <p className="font-mono text-sm mb-4">Producción de temas como "La Venenotza", "La Beba", "France$ka" y "Power Reggae"</p>
+              <p className="font-mono text-sm mb-4">Producción de temas como &ldquo;La Venenotza&rdquo;, &ldquo;La Beba&rdquo;, &ldquo;France$ka&rdquo; y &ldquo;Power Reggae&rdquo;</p>
               <div className="flex justify-end">
                 <a href="https://open.spotify.com/artist/0Gy0Ov8JLNEJnMyzYgOYJo" target="_blank" rel="noopener noreferrer" className="text-yellow hover:text-white transition-colors font-mono text-sm">
                   Ver artista →
@@ -63,7 +62,7 @@ export default function Trabajo() {
             
             <div className="bg-primary/50 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-white/10">
               <h4 className="text-xl font-lora font-semibold mb-3 text-yellow">Moncho Berry</h4>
-              <p className="font-mono text-sm mb-4">Artista y productor con temas como "SENTIRME BIEN", "No Soy Yo" y "Antes De Partir"</p>
+              <p className="font-mono text-sm mb-4">Artista y productor con temas como &ldquo;SENTIRME BIEN&rdquo;, &ldquo;No Soy Yo&rdquo; y &ldquo;Antes De Partir&rdquo;</p>
               <div className="flex justify-end">
                 <a href="https://open.spotify.com/artist/5Hv2bYBhMp1lUHFri9AxXh" target="_blank" rel="noopener noreferrer" className="text-yellow hover:text-white transition-colors font-mono text-sm">
                   Ver artista →
@@ -78,14 +77,14 @@ export default function Trabajo() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-primary/50 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-white/10">
               <p className="italic mb-4 font-mono">
-                "El Totoral no solo grabó nuestra música, sino que también capturó nuestra esencia. Un lugar mágico para
-                crear."
+                &ldquo;El Totoral no solo grabó nuestra música, sino que también capturó nuestra esencia. Un lugar mágico para
+                crear.&rdquo;
               </p>
               <p className="font-lora text-yellow">- Temple Sour</p>
             </div>
             <div className="bg-primary/50 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-white/10">
               <p className="italic mb-4 font-mono">
-                "La experiencia y profesionalismo del equipo hicieron que mi álbum sonara mejor de lo que imaginé."
+                &ldquo;La experiencia y profesionalismo del equipo hicieron que mi álbum sonara mejor de lo que imaginé.&rdquo;
               </p>
               <p className="font-lora text-yellow">- Mattias</p>
             </div>
