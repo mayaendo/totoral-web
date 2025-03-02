@@ -2,7 +2,6 @@
 
 import { Play } from "lucide-react"
 import AlbumCarousel from "./AlbumCarousel"
-import Image from "next/image"
 
 export default function Trabajo() {
   return (
@@ -98,8 +97,8 @@ export default function Trabajo() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-primary/30 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-white/10 relative overflow-hidden">
               {/* Subtle quote mark decoration */}
-              <div className="absolute top-4 left-4 opacity-10 text-6xl font-serif text-yellow">"</div>
-              <div className="absolute bottom-4 right-4 opacity-10 text-6xl font-serif text-yellow">"</div>
+              <div className="absolute top-4 left-4 opacity-10 text-6xl font-serif text-yellow">&quot;</div>
+              <div className="absolute bottom-4 right-4 opacity-10 text-6xl font-serif text-yellow">&quot;</div>
               
               <p className="italic mb-4 font-mono relative z-10">
                 &ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&rdquo;
@@ -108,8 +107,8 @@ export default function Trabajo() {
             </div>
             <div className="bg-primary/30 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-white/10 relative overflow-hidden">
               {/* Subtle quote mark decoration */}
-              <div className="absolute top-4 left-4 opacity-10 text-6xl font-serif text-yellow">"</div>
-              <div className="absolute bottom-4 right-4 opacity-10 text-6xl font-serif text-yellow">"</div>
+              <div className="absolute top-4 left-4 opacity-10 text-6xl font-serif text-yellow">&quot;</div>
+              <div className="absolute bottom-4 right-4 opacity-10 text-6xl font-serif text-yellow">&quot;</div>
               
               <p className="italic mb-4 font-mono relative z-10">
                 &ldquo;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&rdquo;

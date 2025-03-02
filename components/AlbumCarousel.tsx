@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, CSSProperties, useCallback } from 'react';
 import Image from 'next/image';
-import { CSSProperties } from 'react';
 
 interface Album {
   id: number;
@@ -145,13 +144,13 @@ export default function AlbumCarousel() {
     setIsClick(false);
   };
 
-  const goToPrevious = () => {
+  const goToPrevious = useCallback(() => {
     setCurrentIndex(prev => (prev === 0 ? albums.length - 1 : prev - 1));
-  };
+  }, [albums.length]);
 
-  const goToNext = () => {
+  const goToNext = useCallback(() => {
     setCurrentIndex(prev => (prev === albums.length - 1 ? 0 : prev + 1));
-  };
+  }, [albums.length]);
 
   const handleAlbumClick = (index: number) => {
     // If clicking on the current album, select it
