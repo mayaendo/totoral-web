@@ -90,8 +90,39 @@ module.exports = {
       transitionTimingFunction: {
         'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
       },
+      perspective: {
+        'none': 'none',
+        '500': '500px',
+        '1000': '1000px',
+        '2000': '2000px',
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.perspective-none': {
+          perspective: 'none',
+        },
+        '.perspective-500': {
+          perspective: '500px',
+        },
+        '.perspective-1000': {
+          perspective: '1000px',
+        },
+        '.perspective-2000': {
+          perspective: '2000px',
+        },
+        '.transform-style-3d': {
+          'transform-style': 'preserve-3d',
+        },
+        '.transform-style-flat': {
+          'transform-style': 'flat',
+        },
+      }
+      addUtilities(newUtilities)
+    },
+  ],
 }
 

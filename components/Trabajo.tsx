@@ -1,10 +1,13 @@
 import { Play } from "lucide-react"
+import AlbumCarousel from "./AlbumCarousel"
 
 export default function Trabajo() {
   return (
     <section className="pt-24 md:pt-28 pb-20 bg-primary text-white" id="trabajo">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-lora font-bold mb-16 text-center text-yellow">Nuestro Trabajo</h2>
+
+        <AlbumCarousel />
 
         <div className="mb-16">
           <h3 className="text-2xl font-lora font-semibold text-yellow mb-8">Música Producida en El Totoral</h3>
