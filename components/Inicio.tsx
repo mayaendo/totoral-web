@@ -55,6 +55,24 @@ export default function Inicio() {
 
   return (
     <section className="relative h-screen w-full overflow-hidden -mt-[4rem]" style={{ margin: 0, padding: 0 }}>
+      {/* Decorative Elements - Background Patterns */}
+      <div className="absolute inset-0 z-5 pointer-events-none">
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-transparent to-primary/40"></div>
+        
+        {/* Animated floating particles */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+          <div className="particle-1 absolute w-4 h-4 rounded-full bg-yellow/10 blur-sm"></div>
+          <div className="particle-2 absolute w-6 h-6 rounded-full bg-accent/10 blur-sm"></div>
+          <div className="particle-3 absolute w-3 h-3 rounded-full bg-secondary/10 blur-sm"></div>
+          <div className="particle-4 absolute w-5 h-5 rounded-full bg-yellow/10 blur-sm"></div>
+          <div className="particle-5 absolute w-8 h-8 rounded-full bg-white/5 blur-md"></div>
+        </div>
+        
+        {/* Subtle vignette effect */}
+        <div className="absolute inset-0 bg-radial-gradient pointer-events-none"></div>
+      </div>
+
       {/* Background Images with Zoom Effect */}
       {backgroundImages.map((image, index) => {
         // Determine if this image is active, next, or inactive
@@ -73,7 +91,12 @@ export default function Inicio() {
               transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)'
             }}
           >
-            <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+            {/* Enhanced overlay with gradient */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70 z-10"></div>
+            
+            {/* Texture overlay */}
+            <div className="absolute inset-0 bg-noise opacity-10 mix-blend-overlay z-10"></div>
+            
             <div 
               className="absolute inset-0"
               style={{ 
@@ -107,32 +130,19 @@ export default function Inicio() {
                   alt="El Totoral Logo" 
                   width={310} 
                   height={100} 
-                  className="mb-3"
+                  className="mb-3 drop-shadow-lg"
                 />
               </div>
-              <p className="mt-2">es el <span className="text-yellow">estudio</span></p>
+              <p className="mt-2">es el <span className="text-yellow drop-shadow-md">estudio</span></p>
             </div>
-            <p className="mb-2">donde la <span className="text-yellow">música</span></p>
-            <p>echa <span className="text-yellow">raíces</span></p>
+            <p className="mb-2">donde la <span className="text-yellow drop-shadow-md">música</span></p>
+            <p>echa <span className="text-yellow drop-shadow-md">raíces</span></p>
           </div>
         </div>
       </div>
 
-      {/* Contact Button - Bottom Right with Totora Plant Image on top */}
+      {/* Contact Button - Bottom Right */}
       <div className="absolute bottom-8 right-8 z-30 flex flex-col items-center">
-        {/* Totora Plant Image - Small, directly on top of button */}
-        <div 
-          className="cursor-pointer transition-transform hover:scale-105 duration-300 mb-[-10px]"
-          onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
-        >
-          <Image 
-            src="/images/inicio/inicio_totora_color.png" 
-            alt="Planta de Totora" 
-            width={40} 
-            height={60} 
-            className="object-contain"
-          />
-        </div>
         <Link href="/contacto">
           <button className="bg-yellow text-primary px-6 py-3 rounded-full font-mono text-lg font-bold hover:bg-white transition-colors duration-300 shadow-lg">
             Contacto

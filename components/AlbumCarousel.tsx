@@ -14,29 +14,32 @@ interface Album {
 export default function AlbumCarousel() {
   // Extract image names and create album data
   const albums: Album[] = [
-    { id: 1, imagePath: '/images/trabajo/porta_jaze.jpg', title: 'Jaze', artist: 'Jaze' },
-    { id: 2, imagePath: '/images/trabajo/porta_paraque.jpg', title: 'Para Que', artist: 'Artist' },
+    { id: 1, imagePath: '/images/trabajo/porta_jaze.jpg', title: 'Personalidad 7', artist: 'Jaze' },
+    { id: 2, imagePath: '/images/trabajo/porta_paraque.jpg', title: 'Para Qué', artist: 'Carlos Cruzalegui, rulolo' },
     { id: 3, imagePath: '/images/trabajo/porta_lavenenotzatemple.jpg', title: 'La Venenotza', artist: 'Temple Sour' },
-    { id: 4, imagePath: '/images/trabajo/porta_antesdepartirmoncho.jpg', title: 'Antes De Partir', artist: 'Moncho Berry' },
-    { id: 5, imagePath: '/images/trabajo/porta_narrotemple.jpg', title: 'Narro', artist: 'Temple Sour' },
-    { id: 6, imagePath: '/images/trabajo/porta_mattias1.jpg', title: 'Mattias 1', artist: 'Mattias' },
-    { id: 7, imagePath: '/images/trabajo/porta_sentirmebienmoncho.jpg', title: 'Sentirme Bien', artist: 'Moncho Berry' },
-    { id: 8, imagePath: '/images/trabajo/porta_habitacionrulolo.jpg', title: 'Habitacion', artist: 'Rulolo' },
-    { id: 9, imagePath: '/images/trabajo/porta_mattias.jpg', title: 'Mattias', artist: 'Mattias' },
-    { id: 10, imagePath: '/images/trabajo/porta_nosoyyomonchotiare.jpg', title: 'No Soy Yo', artist: 'Moncho & Tiare' },
-    { id: 11, imagePath: '/images/trabajo/porta_toylokazojuanca.jpg', title: 'Toy Lokazo', artist: 'Juanca' },
-    { id: 12, imagePath: '/images/trabajo/porta_rulolo.jpg', title: 'Rulolo', artist: 'Rulolo' },
-    { id: 13, imagePath: '/images/trabajo/porta_elsolpaiva.jpg', title: 'El Sol', artist: 'Paiva' },
-    { id: 14, imagePath: '/images/trabajo/porta_sandrobevilaqu.jpg', title: 'Sandro', artist: 'Bevilaqua' },
-    { id: 15, imagePath: '/images/trabajo/porta_sophiarogers.jpg', title: 'Sophia Rogers', artist: 'Sophia Rogers' },
+    { id: 4, imagePath: '/images/trabajo/porta_antesdepartirmoncho.jpg', title: 'Antes De Partir', artist: 'Moncho Berry, Julian Carrion' },
+    { id: 5, imagePath: '/images/trabajo/porta_narrotemple.jpg', title: 'N.A.R.R.O', artist: 'Temple Sour' }, 
+    { id: 6, imagePath: '/images/trabajo/porta_mattias1.jpg', title: 'Growing Old is Getting Old', artist: 'mattias' },
+    { id: 7, imagePath: '/images/trabajo/porta_sentirmebienmoncho.jpg', title: 'SENTIRME BIEN', artist: 'Moncho Berry' },
+    { id: 8, imagePath: '/images/trabajo/porta_habitacionrulolo.jpg', title: 'Habitacion', artist: 'rulolo, Maya Endo' },
+    { id: 9, imagePath: '/images/trabajo/porta_mattias.jpg', title: 'letters to you, my love', artist: 'mattias' },
+    { id: 10, imagePath: '/images/trabajo/porta_nosoyyomonchotiare.jpg', title: 'No Soy Yo', artist: 'Moncho Berry, Tiare' },
+    { id: 11, imagePath: '/images/trabajo/porta_toylokazojuanca.jpg', title: 'TOY LOKAZO', artist: 'Jaze' },
+    { id: 12, imagePath: '/images/trabajo/porta_rulolo.jpg', title: 'AT', artist: 'rulolo' },
+    { id: 13, imagePath: '/images/trabajo/porta_elsolpaiva.jpg', title: 'El Sol', artist: 'El Joven Paiva' },
+    { id: 14, imagePath: '/images/trabajo/porta_sandrobevilaqu.jpg', title: 'Lila', artist: 'Sandro Bevilaqua' },
+    { id: 15, imagePath: '/images/trabajo/porta_sophiarogers.jpg', title: 'Spring Song', artist: 'Sophia Rogers' },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(7); // Start in the middle
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [dragOffset, setDragOffset] = useState(0);
-  const [dragThreshold] = useState(40); // Fixed: removed unused setter function
+  const [dragThreshold] = useState(40); // Desktop threshold
+  const [mobileDragThreshold] = useState(70); // Higher threshold for mobile
   const [lastDragTime, setLastDragTime] = useState(0);
+  const [touchThrottleTime] = useState(100); // Longer throttle time for touch (100ms)
+  const [mouseThrottleTime] = useState(50); // Original throttle time for mouse (50ms)
   const carouselRef = useRef<HTMLDivElement>(null);
   const [selectedAlbum, setSelectedAlbum] = useState<number | null>(null);
   const [isClick, setIsClick] = useState(false);
@@ -56,7 +59,7 @@ export default function AlbumCarousel() {
     
     // Add throttling to slow down the rotation
     const now = Date.now();
-    if (now - lastDragTime < 50) return; // Only process every 50ms
+    if (now - lastDragTime < mouseThrottleTime) return; // Only process every 50ms
     
     // Continuous rotation effect - only while dragging
     if (Math.abs(deltaX) > dragThreshold) {
@@ -111,12 +114,14 @@ export default function AlbumCarousel() {
     const deltaX = e.touches[0].clientX - startX;
     setDragOffset(deltaX);
     
-    // Add throttling to slow down the rotation
+    // Add throttling to slow down the rotation - longer for touch
     const now = Date.now();
-    if (now - lastDragTime < 50) return; // Only process every 50ms
+    if (now - lastDragTime < touchThrottleTime) return; // Increased throttle time for touch
     
     // Continuous rotation effect - only while dragging
-    if (Math.abs(deltaX) > dragThreshold) {
+    // Use higher threshold for touch to make it less sensitive
+    if (Math.abs(deltaX) > mobileDragThreshold) {
+      // Reduce the effect of movement by only moving if drag is significant
       const direction = deltaX > 0 ? -1 : 1; // Reverse direction for natural feel
       
       // Move only one album at a time for smoother control
@@ -126,7 +131,9 @@ export default function AlbumCarousel() {
         return newIndex;
       });
       
-      setStartX(e.touches[0].clientX);
+      // Reset start position but only partially to create resistance
+      // This creates a "sticky" feel that slows down scrolling
+      setStartX(prevX => prevX + (deltaX * 0.7)); // Only reset 70% of the way
       setLastDragTime(now);
       setIsClick(false); // If we've dragged enough to move, it's not a click
     }
