@@ -4,6 +4,8 @@ import Navegacion from "../../components/Navegacion";
 import ElEstudio from "../../components/ElEstudio";
 import { useState } from "react";
 import Image from "next/image";
+import Footer from "../../components/Footer"; 
+
 
 // Define the gallery items with descriptions based on image names
 const galleryItems = [
@@ -108,6 +110,8 @@ export default function EstudioPage() {
           </div>
         </div>
       </div>
+            <Footer /> 
+      
     </main>
   );
 } 

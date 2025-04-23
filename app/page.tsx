@@ -1,8 +1,10 @@
 import Inicio from "../components/Inicio"
 import Navegacion from "../components/Navegacion"
 import Filosofia from "../components/Filosofia"
+import CarouselHome from "@/components/CarouselHome"
 import Team from "../components/Team"
 import Contacto from "../components/Contacto"
+import Footer from "../components/Footer" 
 
 export default function Home() {
   return (
@@ -10,9 +12,12 @@ export default function Home() {
       <Navegacion />
       <Inicio />
       <Filosofia />
+      <CarouselHome/>
       <Team />
       <Contacto />
+      <Footer /> 
     </main>
   )
 }
+
 
