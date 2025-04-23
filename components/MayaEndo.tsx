@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function MayaEndo() {
   return (
-    <div className="bg-primary text-white py-24 px-6 md:px-20 lg:px-40">
+    <div className="min-h-[calc(100vh-160px)] bg-primary text-white py-24 px-6 md:px-20 lg:px-40 flex items-center">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-12 items-center">
         {/* Foto */}
         <div className="flex-shrink-0 w-full md:w-1/2">
