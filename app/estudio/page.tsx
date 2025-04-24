@@ -1,93 +1,67 @@
-'use client';
+// app/estudio/page.tsx
+"use client";
 
 import Navegacion from "../../components/Navegacion";
 import ElEstudio from "../../components/ElEstudio";
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import Footer from "../../components/Footer"; 
+import Footer from "../../components/Footer";
+import { FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
 
-
-// Define the gallery items with descriptions based on image names
 const galleryItems = [
-  {
-    src: "/images/elestudio/estudio_setupescritorio.jpg",
-    alt: "Setup de escritorio del estudio",
-    description: "Estación de trabajo principal con equipos de producción y mezcla"
-  },
-  {
-    src: "/images/elestudio/estudio_setupescritorio1.jpg",
-    alt: "Setup de escritorio alternativo",
-    description: "Vista alternativa de la estación de trabajo con monitores y controladores"
-  },
-  {
-    src: "/images/elestudio/estudio_espacio.jpg",
-    alt: "Espacio del estudio",
-    description: "Ambiente acústicamente tratado para grabaciones profesionales"
-  },
-  {
-    src: "/images/elestudio/estudio_pad.jpg",
-    alt: "Pad controlador",
-    description: "Controlador MIDI para producción y programación de ritmos"
-  },
-  {
-    src: "/images/elestudio/estudio_bajo.jpg",
-    alt: "Bajo eléctrico",
-    description: "Bajo eléctrico disponible para sesiones de grabación"
-  },
-  {
-    src: "/images/elestudio/estudio_microblanco.jpg",
-    alt: "Micrófono blanco",
-    description: "Micrófono de condensador para captación vocal de alta fidelidad"
-  },
-  {
-    src: "/images/elestudio/estudio_midi.jpg",
-    alt: "Controlador MIDI",
-    description: "Teclado MIDI para composición y arreglos musicales"
-  },
-  {
-    src: "/images/elestudio/estudio_setupescritorio2.jpg",
-    alt: "Setup de escritorio completo",
-    description: "Vista completa del área de producción y mezcla"
-  },
-  {
-    src: "/images/elestudio/estudio_pantallas.jpg",
-    alt: "Pantallas de monitoreo",
-    description: "Monitores para edición visual y mezcla de audio"
-  },
-  {
-    src: "/images/elestudio/estudio_armonica.jpg",
-    alt: "Armónica",
-    description: "Armónica para sesiones de grabación y detalles melódicos"
-  },
-  {
-    src: "/images/elestudio/estudio_micronegro.jpg",
-    alt: "Micrófono negro",
-    description: "Micrófono dinámico profesional para voces e instrumentos"
-  },
-  {
-    src: "/images/elestudio/estudio_ampliylibros.jpg",
-    alt: "Amplificador y libros",
-    description: "Amplificador de guitarra y biblioteca de referencia musical"
-  }
+  { src: "/images/elestudio/estudio_setupescritorio.jpg", alt: "Setup de escritorio del estudio" },
+  { src: "/images/elestudio/estudio_setupescritorio1.jpg", alt: "Setup de escritorio alternativo" },
+  { src: "/images/elestudio/estudio_espacio.jpg", alt: "Espacio del estudio" },
+  { src: "/images/elestudio/estudio_pad.jpg", alt: "Pad controlador" },
+  { src: "/images/elestudio/estudio_bajo.jpg", alt: "Bajo eléctrico" },
+  { src: "/images/elestudio/estudio_microblanco.jpg", alt: "Micrófono blanco" },
+  { src: "/images/elestudio/estudio_midi.jpg", alt: "Controlador MIDI" },
+  { src: "/images/elestudio/estudio_setupescritorio2.jpg", alt: "Setup de escritorio completo" },
+  { src: "/images/elestudio/estudio_pantallas.jpg", alt: "Pantallas de monitoreo" },
+  { src: "/images/elestudio/estudio_armonica.jpg", alt: "Armónica" },
+  { src: "/images/elestudio/estudio_micronegro.jpg", alt: "Micrófono negro" },
+  { src: "/images/elestudio/estudio_ampliylibros.jpg", alt: "Amplificador y libros" },
 ];
 
 export default function EstudioPage() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const handleNext = () => {
+    if (activeIndex !== null)
+      setActiveIndex((activeIndex + 1) % galleryItems.length);
+  };
+
+  const handlePrev = () => {
+    if (activeIndex !== null)
+      setActiveIndex((activeIndex - 1 + galleryItems.length) % galleryItems.length);
+  };
+
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if (activeIndex !== null) {
+      if (e.key === "ArrowRight") handleNext();
+      if (e.key === "ArrowLeft") handlePrev();
+      if (e.key === "Escape") setActiveIndex(null);
+    }
+  }, [activeIndex]);
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [handleKeyDown]);
 
   return (
     <main className="relative overflow-hidden min-h-screen bg-primary">
       <Navegacion />
       <ElEstudio />
-      
+
       <div className="pb-20 -mt-4">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {galleryItems.map((item, index) => (
-              <div 
+              <div
                 key={index}
                 className="relative aspect-square overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-[1.02] cursor-pointer bg-primary/50 backdrop-blur-sm border border-white/10"
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
+                onClick={() => setActiveIndex(index)}
               >
                 <Image
                   src={item.src}
@@ -96,22 +70,36 @@ export default function EstudioPage() {
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   className="object-cover"
                 />
-                
-                {hoveredIndex === index && (
-                  <div className="absolute inset-0 bg-primary/80 flex items-end p-4 transition-opacity duration-300">
-                    <div>
-                      <h3 className="text-yellow font-mono text-lg font-bold mb-1">{item.alt}</h3>
-                      <p className="text-white font-mono text-sm">{item.description}</p>
-                    </div>
-                  </div>
-                )}
               </div>
             ))}
           </div>
         </div>
       </div>
-            <Footer /> 
-      
+
+      {activeIndex !== null && (
+        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
+          <button className="absolute top-6 right-6 text-white text-3xl z-50" onClick={() => setActiveIndex(null)}>
+            <FaTimes />
+          </button>
+          <button className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-4xl z-50" onClick={handlePrev}>
+            <FaChevronLeft />
+          </button>
+          <div className="max-w-4xl w-full px-4">
+            <Image
+              src={galleryItems[activeIndex].src}
+              alt={galleryItems[activeIndex].alt}
+              width={1600}
+              height={1600}
+              className="w-full h-auto max-h-[80vh] object-contain mx-auto rounded-lg shadow-lg"
+            />
+          </div>
+          <button className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-4xl z-50" onClick={handleNext}>
+            <FaChevronRight />
+          </button>
+        </div>
+      )}
+
+      <Footer />
     </main>
   );
-} 
+}
