@@ -8,7 +8,7 @@ export default function Footer() {
         {/* Logo y descripción a la izquierda */}
         <div className="flex flex-col items-start">
           <img
-            src="/images/logo 2.jpg"
+            src="/images/Logo2.jpg"
             alt="El Totoral Logo"
             className="mb-2 w-28"
           />
@@ -20,7 +20,7 @@ export default function Footer() {
         {/* Navegación en 2 columnas */}
         <div>
           <h3 className="font-bold mb-2">Navegación</h3>
-          <div className="grid grid-cols-2 gap-x-6 gap-y-1">
+          <div className="grid grid-cols-2 gap-x-1 gap-y-0.5">
             <Link href="/" className="hover:text-[#ffee8d]">Inicio</Link>
             <Link href="/trabajo" className="hover:text-[#ffee8d]">Trabajo</Link>
             <Link href="/contacto" className="hover:text-[#ffee8d]">Contacto</Link>

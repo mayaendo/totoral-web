@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 interface TeamMember {
   name: string;
@@ -13,34 +13,37 @@ interface TeamMember {
 export default function Team() {
   const teamMembers: TeamMember[] = [
     {
-      name: 'Moncho',
-      image: '/images/team/moncho.png',
-      link: '/moncho',
+      name: "Moncho",
+      image: "/images/team/moncho.png",
+      link: "/moncho",
     },
     {
-      name: 'Lolo',
-      image: '/images/team/lolo.png',
-      link: '/lolo',
+      name: "Lolo",
+      image: "/images/team/lolo.png",
+      link: "/lolo",
     },
     {
-      name: 'Maya Endo',
-      image: '/images/team/maya.jpg',
-      link: '/mayaendo',
+      name: "Maya Endo",
+      image: "/images/team/maya.jpg",
+      link: "/mayaendo",
     },
   ];
 
   const [hoveredMember, setHoveredMember] = useState<number | null>(null);
 
   return (
-    <section id="equipo" className="py-20 bg-primary text-white">
+    <section id="equipo" className="py-12 bg-primary text-white">
       <div className="container mx-auto px-4 md:px-16 lg:px-24">
-        <h2 className="text-4xl md:text-5xl font-lora font-semibold mb-16 text-center">
-          Nuestro <span className="text-yellow">Equipo</span>
-        </h2>
-        
+      <div className="text-center mb-16">
+          <h2 className="text-4xl font-lora font-bold text-yellow relative inline-block">
+            Nuestro Equipo
+            <div className="w-full h-[3px] bg-gradient-to-r from-transparent via-yellow/70 to-transparent absolute -bottom-4 left-0"></div>
+          </h2>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {teamMembers.map((member, index) => (
-            <div 
+            <div
               key={member.name}
               className="relative group"
               onMouseEnter={() => setHoveredMember(index)}
@@ -55,18 +58,20 @@ export default function Team() {
                     className="object-cover object-center"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
-                  
+
                   {/* Overlay al pasar el mouse */}
-                  <div 
+                  <div
                     className={`absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-transparent transition-opacity duration-300 ${
-                      hoveredMember === index ? 'opacity-30' : 'opacity-0'
+                      hoveredMember === index ? "opacity-30" : "opacity-0"
                     }`}
                   ></div>
                 </div>
               </Link>
 
               <div className="text-center mt-4">
-                <h3 className="text-2xl font-lora font-semibold">{member.name}</h3>
+                <h3 className="text-2xl font-lora font-semibold">
+                  {member.name}
+                </h3>
               </div>
             </div>
           ))}

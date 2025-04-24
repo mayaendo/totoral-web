@@ -4,7 +4,7 @@ import AlbumCarousel from "./AlbumCarousel";
 
 export default function CarouselHome() {
   return (
-    <section className="relative py-20 bg-primary text-white overflow-hidden">
+    <section className="relative py-12 bg-primary text-white overflow-hidden">
       {/* Fondo decorativo */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary to-primary/95"></div>

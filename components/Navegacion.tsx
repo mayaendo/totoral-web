@@ -18,7 +18,7 @@ export default function Navegacion() {
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="flex items-center">
           <Image 
-            src="/images/Logo 2.jpg" 
+            src="/images/Logo2.jpg" 
             alt="El Totoral Logo" 
             width={100} 
             height={35} 

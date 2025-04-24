@@ -10,30 +10,16 @@ export default function Trabajo() {
       className="relative pt-24 md:pt-28 pb-20 bg-primary text-white overflow-hidden"
       id="trabajo"
     >
-      {/* Enhanced background with decorative elements */}
+      {/* Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Gradient background */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary to-primary/95"></div>
-
-        {/* Subtle pattern overlay */}
         <div className="absolute inset-0 bg-noise opacity-5 mix-blend-soft-light"></div>
-
-        {/* Decorative elements */}
         <div className="absolute top-0 left-0 w-full h-full">
-          {/* Abstract shapes */}
           <div className="absolute top-[5%] right-[10%] w-72 h-72 rounded-full bg-yellow/5 blur-3xl"></div>
           <div className="absolute bottom-[20%] left-[5%] w-96 h-96 rounded-full bg-accent/5 blur-3xl"></div>
           <div className="absolute top-[40%] left-[30%] w-64 h-64 rounded-full bg-secondary/5 blur-3xl"></div>
-
-          {/* Subtle musical notes or symbols */}
           <div className="absolute top-[15%] left-[15%] opacity-10">
-            <svg
-              width="40"
-              height="40"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
               <path
                 d="M9 17V5L20 3V15"
                 stroke="#F9C80E"
@@ -46,13 +32,7 @@ export default function Trabajo() {
             </svg>
           </div>
           <div className="absolute bottom-[30%] right-[20%] opacity-10">
-            <svg
-              width="30"
-              height="30"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
               <path
                 d="M9 17V5L20 3V15"
                 stroke="#F9C80E"
@@ -68,6 +48,7 @@ export default function Trabajo() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
+        {/* Título sección */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-lora font-bold text-yellow relative inline-block">
             Nuestro Trabajo
@@ -75,15 +56,13 @@ export default function Trabajo() {
           </h2>
         </div>
 
-        <AlbumCarousel />
-
+        {/* Spotify Playlist */}
         <div className="mb-16">
           <h3 className="text-2xl font-lora font-semibold text-yellow mb-8 relative inline-block">
             Música Producida en El Totoral
             <div className="w-full h-[2px] bg-gradient-to-r from-yellow/50 to-transparent absolute -bottom-2 left-0"></div>
           </h3>
           <div className="bg-primary/30 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-white/10 relative overflow-hidden">
-            {/* Subtle background decoration for the card */}
             <div className="absolute inset-0 overflow-hidden">
               <div className="absolute top-0 right-0 w-40 h-40 bg-yellow/5 rounded-full blur-xl -translate-y-1/2 translate-x-1/2"></div>
               <div className="absolute bottom-0 left-0 w-40 h-40 bg-accent/5 rounded-full blur-xl translate-y-1/2 -translate-x-1/2"></div>
@@ -121,7 +100,8 @@ export default function Trabajo() {
           </div>
         </div>
 
-        <div>
+        {/* Testimonios / YouTube Placeholders */}
+        <div className="mb-16">
           <h3 className="text-2xl font-lora font-semibold text-yellow mb-8 relative inline-block">
             Testimonios
             <div className="w-full h-[2px] bg-gradient-to-r from-yellow/50 to-transparent absolute -bottom-2 left-0"></div>
@@ -132,13 +112,10 @@ export default function Trabajo() {
                 key={idx}
                 className="bg-primary/30 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-white/10 relative overflow-hidden h-64 flex items-center justify-center"
               >
-                {/* Ícono Play en el centro */}
                 <div className="text-center text-white/70 font-mono text-lg relative z-10">
                   <FaPlay className="mx-auto text-yellow text-4xl mb-3 opacity-80" />
                   Video testimonial próximamente
                 </div>
-
-                {/* Fondo decorativo sutil */}
                 <div className="absolute top-4 left-4 opacity-10 text-6xl font-serif text-yellow">
                   &quot;
                 </div>
@@ -149,6 +126,15 @@ export default function Trabajo() {
             ))}
           </div>
         </div>
+
+        {/* Album Carousel */}
+        <div className="mb-2">
+          <h3 className="text-2xl font-lora font-semibold text-yellow mb-8 relative inline-block">
+            Nuestras Producciones
+            <div className="w-full h-[2px] bg-gradient-to-r from-yellow/50 to-transparent absolute -bottom-2 left-0"></div>
+          </h3>
+        </div>
+        <AlbumCarousel />
       </div>
     </section>
   );
