@@ -3,7 +3,6 @@
 import Navegacion from "../../components/Navegacion";
 import Footer from "../../components/Footer";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function NosotrosPage() {
   return (
