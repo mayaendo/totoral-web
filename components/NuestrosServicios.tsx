@@ -14,8 +14,28 @@ export default function NuestrosServicios() {
     {
       icon: <Music className="w-12 h-12 text-yellow" />,
       title: "Producción",
-      description:
-        "Damos forma a tu visión musical con experiencia y creatividad. Desde la composición hasta los arreglos, nuestro equipo te ayudará a desarrollar tus ideas y convertirlas en piezas musicales completas. Contamos con instrumentos virtuales y físicos para enriquecer tu sonido.",
+      description: (
+        <>
+          <p>
+            Damos forma a tu visión musical con creatividad y criterio. Desde la
+            composición hasta los arreglos, te ayudamos a convertir ideas en
+            piezas musicales completas, con instrumentos virtuales y físicos
+            para enriquecer tu sonido.
+          </p>
+          <div className="mt-6 flex items-center gap-3">
+            <Mic className="w-6 h-6 text-yellow" />
+            <h4 className="text-2xl font-lora font-semibold text-yellow">
+              Producción vocal
+            </h4>
+          </div>
+          <p className="font-mono text-sm text-white/80 mt-2">
+            Guiamos a los artistas en la interpretación vocal y armonización,
+            asegurando tomas emocionales y técnicamente sólidas. Además,
+            realizamos edición detallada para lograr un resultado profesional y
+            expresivo.
+          </p>
+        </>
+      ),
       image: "/images/elestudio/estudio_pad.jpg",
       alt: "Controlador MIDI para producción musical",
     },

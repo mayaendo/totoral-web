@@ -17,7 +17,7 @@ export default function Footer() {
           />
 
           <p className="text-gray-300 leading-tight">
-            El Totoral <br />— El estudio donde la musica echa raices
+            El Totoral <br />es el  estudio donde la musica echa raices.
           </p>
         </div>
 
@@ -75,7 +75,7 @@ export default function Footer() {
       </div>
 
       {/* Derechos reservados dentro del bloque */}
-      <div className="text-center text-gray-500 border-t border-gray-700 pt-4 pb-6">
+      <div className="text-center text-gray-500 border-t border-gray-700 pt-0.5 pb-0.5">
         &copy; {new Date().getFullYear()} El Totoral. Todos los derechos
         reservados.
       </div>

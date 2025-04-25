@@ -8,6 +8,7 @@ interface Album {
   imagePath: string;
   title: string;
   artist: string;
+  credits: string;
 }
 
 export default function AlbumCarousel() {
@@ -18,90 +19,100 @@ export default function AlbumCarousel() {
       imagePath: "/images/trabajo/porta_jaze.jpg",
       title: "Personalidad 7",
       artist: "Jaze",
+      credits: "Co-producción por Lorenzo Tapia",
     },
     {
       id: 2,
       imagePath: "/images/trabajo/porta_paraque.jpg",
       title: "Para Qué",
       artist: "Carlos Cruzalegui, rulolo",
-    },
-    {
-      id: 3,
-      imagePath: "/images/trabajo/porta_lavenenotzatemple.jpg",
-      title: "La Venenotza",
-      artist: "Temple Sour",
+      credits: "Producción y mix por Lorenzo Tapia",
     },
     {
       id: 4,
       imagePath: "/images/trabajo/porta_antesdepartirmoncho.jpg",
       title: "Antes De Partir",
       artist: "Moncho Berry, Julian Carrion",
+      credits: "Producción y mix por Simon Yriberry",
     },
     {
       id: 5,
       imagePath: "/images/trabajo/porta_narrotemple.jpg",
       title: "N.A.R.R.O",
       artist: "Temple Sour",
+      credits: "—",
     },
     {
       id: 6,
       imagePath: "/images/trabajo/porta_mattias1.jpg",
       title: "Growing Old is Getting Old",
       artist: "mattias",
+      credits: "Producción por Simon Yriberry",
     },
     {
       id: 7,
       imagePath: "/images/trabajo/porta_sentirmebienmoncho.jpg",
       title: "SENTIRME BIEN",
       artist: "Moncho Berry",
+      credits: "Producción por Simon Yriberry",
     },
     {
       id: 8,
       imagePath: "/images/trabajo/porta_habitacionrulolo.jpg",
       title: "Habitacion",
       artist: "rulolo, Maya Endo",
+      credits: "Producción, mix y máster por Lorenzo Tapia",
     },
     {
       id: 9,
       imagePath: "/images/trabajo/porta_mattias.jpg",
       title: "letters to you, my love",
       artist: "mattias",
+      credits: "Producción por Simon Yriberry y Lorenzo Tapia",
     },
     {
       id: 10,
       imagePath: "/images/trabajo/porta_nosoyyomonchotiare.jpg",
       title: "No Soy Yo",
       artist: "Moncho Berry, Tiare",
+      credits:
+        "Producción por Lorenzo Tapia y Simon Yriberry, máster por Lorenzo Tapia",
     },
     {
       id: 11,
       imagePath: "/images/trabajo/porta_toylokazojuanca.jpg",
       title: "TOY LOKAZO",
       artist: "Jaze",
+      credits: "Producción, ingeniería de sonido por Lorenzo Tapia",
     },
     {
       id: 12,
       imagePath: "/images/trabajo/porta_rulolo.jpg",
       title: "AT",
       artist: "rulolo",
+      credits:
+        "Producción, ingeniería de sonido, mix y máster por Lorenzo Tapia",
     },
     {
       id: 13,
       imagePath: "/images/trabajo/porta_elsolpaiva.jpg",
       title: "El Sol",
       artist: "El Joven Paiva",
+      credits: "Producción vocal por Simon Yriberry, máster por Lorenzo Tapia",
     },
     {
       id: 14,
       imagePath: "/images/trabajo/porta_sandrobevilaqu.jpg",
       title: "Lila",
       artist: "Sandro Bevilaqua",
+      credits: "Producción y mix por Simon Yriberry",
     },
     {
       id: 15,
       imagePath: "/images/trabajo/porta_sophiarogers.jpg",
       title: "Spring Song",
       artist: "Sophia Rogers",
+      credits: "Mix por Simon Yriberry, máster por Lorenzo Tapia",
     },
   ];
 
@@ -512,7 +523,7 @@ export default function AlbumCarousel() {
       </div>
 
       {/* Album info */}
-      <div className="text-center mt-2 h-16 relative z-10">
+      <div className="text-center mt-2 relative z-10 space-y-1">
         <h4 className="text-xl font-lora font-semibold text-yellow">
           {selectedAlbum !== null
             ? albums[selectedAlbum].title
@@ -523,10 +534,15 @@ export default function AlbumCarousel() {
             ? albums[selectedAlbum].artist
             : albums[currentIndex].artist}
         </p>
+        <p className="font-mono text-white/80 text-xs">
+          {selectedAlbum !== null
+            ? albums[selectedAlbum].credits
+            : albums[currentIndex].credits}
+        </p>
       </div>
 
       <div className="text-center mt-1 relative z-10">
-        <p className="font-mono text-xs text-white/60">
+        <p className="font-mono text-xs text-white/50">
           {selectedAlbum === null
             ? "Desliza, usa los botones o las flechas del teclado para navegar entre álbumes"
             : "Haz clic en el botón de cerrar para volver al carrusel"}

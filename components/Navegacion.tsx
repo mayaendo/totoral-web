@@ -83,6 +83,14 @@ export default function Navegacion() {
           </li>
           <li>
             <Link 
+              href="/nosotros" 
+              className={`hover:text-yellow ${pathname === '/nosotros' ? 'font-bold text-yellow' : ''}`}
+            >
+              Nosotros
+            </Link>
+          </li>
+          <li>
+            <Link 
               href="/contacto" 
               className={`hover:text-yellow ${pathname === '/contacto' ? 'font-bold text-yellow' : ''}`}
             >
@@ -130,6 +138,15 @@ export default function Navegacion() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Trabajo
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/nosotros" 
+                className={`block px-3 py-2 rounded-md hover:bg-primary/50 ${pathname === '/nosotros' ? 'font-bold text-yellow' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Nosotros
               </Link>
             </li>
             <li>
