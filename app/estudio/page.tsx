@@ -26,15 +26,17 @@ const galleryItems = [
 export default function EstudioPage() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const handleNext = () => {
-    if (activeIndex !== null)
+  const handleNext = useCallback(() => {
+    if (activeIndex !== null) {
       setActiveIndex((activeIndex + 1) % galleryItems.length);
-  };
+    }
+  }, [activeIndex]);
 
-  const handlePrev = () => {
-    if (activeIndex !== null)
+  const handlePrev = useCallback(() => {
+    if (activeIndex !== null) {
       setActiveIndex((activeIndex - 1 + galleryItems.length) % galleryItems.length);
-  };
+    }
+  }, [activeIndex]);
 
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
     if (activeIndex !== null) {
@@ -42,7 +44,7 @@ export default function EstudioPage() {
       if (e.key === "ArrowLeft") handlePrev();
       if (e.key === "Escape") setActiveIndex(null);
     }
-  }, [activeIndex]);
+  }, [activeIndex, handleNext, handlePrev]);
 
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
@@ -103,3 +105,4 @@ export default function EstudioPage() {
     </main>
   );
 }
+

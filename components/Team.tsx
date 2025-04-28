@@ -13,14 +13,14 @@ interface TeamMember {
 export default function Team() {
   const teamMembers: TeamMember[] = [
     {
-      name: "Moncho",
-      image: "/images/team/moncho.png",
-      link: "/moncho",
-    },
-    {
       name: "Lolo",
       image: "/images/team/lolo.png",
       link: "/lolo",
+    },
+    {
+      name: "Moncho",
+      image: "/images/team/moncho.png",
+      link: "/moncho",
     },
     {
       name: "Maya Endo",
@@ -36,7 +36,7 @@ export default function Team() {
       <div className="container mx-auto px-4 md:px-16 lg:px-24">
       <div className="text-center mb-16">
           <h2 className="text-4xl font-lora font-bold text-yellow relative inline-block">
-            Nuestro Equipo
+           El Equipo
             <div className="w-full h-[3px] bg-gradient-to-r from-transparent via-yellow/70 to-transparent absolute -bottom-4 left-0"></div>
           </h2>
         </div>
