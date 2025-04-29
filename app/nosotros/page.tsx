@@ -44,7 +44,7 @@ export default function NosotrosPage() {
           <div className="mb-20">
             <div className="rounded-lg overflow-hidden shadow-lg max-w-5xl mx-auto">
               <Image
-                src="/images/team/foto-grupal-totoral.png"
+                src="/images/team/foto-grupal-totoral.jpg"
                 alt="Foto grupal del equipo El Totoral"
                 width={1600}
                 height={900}
@@ -65,7 +65,7 @@ export default function NosotrosPage() {
             {/* Lolo */}
             <div className="flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto">
               <Image
-                src="/images/team/lolo.png"
+                src="/images/team/lolo.jpg"
                 alt="Lolo - El Totoral"
                 width={500}
                 height={600}
@@ -92,7 +92,7 @@ export default function NosotrosPage() {
             {/* Moncho */}
             <div className="flex flex-col md:flex-row-reverse items-center gap-10 max-w-6xl mx-auto">
               <Image
-                src="/images/team/moncho.png"
+                src="/images/team/moncho.jpg"
                 alt="Moncho - El Totoral"
                 width={500}
                 height={600}

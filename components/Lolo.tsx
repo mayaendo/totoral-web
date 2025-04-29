@@ -10,7 +10,7 @@ export default function Lolo() {
         {/* Foto */}
         <div className="flex-shrink-0 w-full md:w-1/2">
           <Image
-            src="/images/team/lolo.png"
+            src="/images/team/lolo.jpg"
             alt="Lorenzo Tapia - El Totoral"
             width={600}
             height={800}

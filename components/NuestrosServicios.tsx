@@ -8,7 +8,7 @@ export default function NuestrosServicios() {
       title: "Grabación",
       description:
         "Capturamos tu sonido con precisión y calidad excepcional. Nuestro estudio cuenta con equipos de alta gama y un ambiente acústicamente tratado para lograr grabaciones profesionales. Trabajamos con voces, instrumentos acústicos y eléctricos para darle vida a tu proyecto.",
-      image: "/images/elestudio/estudio_micronegro.jpg",
+      image: "/images/elestudio/grabacion.jpg",
       alt: "Micrófono profesional para grabación",
     },
     {
@@ -36,7 +36,7 @@ export default function NuestrosServicios() {
           </p>
         </>
       ),
-      image: "/images/elestudio/estudio_pad.jpg",
+      image: "/images/elestudio/produccion.jpg",
       alt: "Controlador MIDI para producción musical",
     },
     {
@@ -44,7 +44,7 @@ export default function NuestrosServicios() {
       title: "Mezcla",
       description:
         "Balanceamos y mejoramos cada elemento de tu música. En la etapa de mezcla, trabajamos con precisión para lograr el equilibrio perfecto entre instrumentos y voces, aplicando procesamiento dinámico, ecualización y efectos para crear un sonido cohesivo y profesional.",
-      image: "/images/elestudio/estudio_pantallas.jpg",
+      image: "/images/elestudio/estudio_pad.jpg",
       alt: "Monitores para mezcla de audio",
     },
     {
