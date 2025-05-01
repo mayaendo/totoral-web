@@ -10,7 +10,7 @@ export default function Moncho() {
         {/* Foto */}
         <div className="flex-shrink-0 w-full md:w-1/2">
           <Image
-            src="/images/team/moncho.png"
+            src="/images/team/moncho.jpg"
             alt="Moncho Yriberry - El Totoral"
             width={600}
             height={800}

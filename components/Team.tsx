@@ -14,12 +14,12 @@ export default function Team() {
   const teamMembers: TeamMember[] = [
     {
       name: "Lolo",
-      image: "/images/team/lolo.png",
+      image: "/images/team/lolo.jpg",
       link: "/lolo",
     },
     {
       name: "Moncho",
-      image: "/images/team/moncho.png",
+      image: "/images/team/moncho.jpg",
       link: "/moncho",
     },
     {
