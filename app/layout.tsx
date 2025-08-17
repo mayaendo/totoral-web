@@ -16,8 +16,53 @@ const andaleMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "El Totoral - Estudio de Grabación",
-  description: "Un espacio donde la música echa raíces",
+  metadataBase: new URL("https://eltotoral.com"), // Reemplaza con tu dominio
+  title:
+    "Estudio de Grabación en Lima, Perú | Grabación, Mezcla y Masterización | El Totoral",
+  description:
+    "Estudio de grabación profesional en Lima, Perú. Ofrecemos servicios de grabación, mezcla y masterización de alta calidad para artistas y bandas. ¡Da vida a tu música en El Totoral!",
+  keywords: [
+    "estudio de grabación",
+    "grabación de música",
+    "mezcla de audio",
+    "masterización",
+    "producción musical",
+    "Lima",
+    "Perú",
+    "El Totoral",
+    "estudio de música",
+    "grabación de voces",
+    "grabación de instrumentos",
+  ],
+  authors: [{ name: "El Totoral", url: "https://eltotoral.com" }], // Reemplaza con tu dominio
+  creator: "El Totoral",
+  publisher: "El Totoral",
+  openGraph: {
+    title:
+      "El Totoral | Estudio de Grabación Profesional en Lima, Perú",
+    description:
+      "Servicios de grabación, mezcla y masterización para llevar tu música al siguiente nivel.",
+    url: "https://eltotoral.com", // Reemplaza con tu dominio
+    siteName: "El Totoral",
+    images: [
+      {
+        url: "/images/inicio/inicio_raices_color.png", // Reemplaza con una imagen representativa
+        width: 1200,
+        height: 630,
+        alt: "Logo El Totoral Estudio de Grabación",
+      },
+    ],
+    locale: "es_PE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "El Totoral | Estudio de Grabación Profesional en Lima, Perú",
+    description:
+      "Servicios de grabación, mezcla y masterización para llevar tu música al siguiente nivel.",
+    images: ["/images/inicio/inicio_raices_color.png"], // Reemplaza con una imagen representativa
+  },
 };
 
 export default function RootLayout({
