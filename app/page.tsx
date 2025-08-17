@@ -10,10 +10,12 @@ export default function Home() {
     <main className="relative overflow-x-hidden">
       <Navegacion />
       <Inicio />
-      <CarouselHome/>
-      <Team />
-      <Contacto />
-      <Footer /> 
+      <div className="bg-gradient-to-b from-[#65524D] to-[#3a2a26]">
+        <CarouselHome />
+        <Team />
+        <Contacto />
+      </div>
+      <Footer />
     </main>
   )
 }

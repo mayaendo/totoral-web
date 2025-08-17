@@ -38,9 +38,9 @@ export default function AlbumCarousel() {
     {
       id: 5,
       imagePath: "/images/trabajo/porta_narrotemple.jpg",
-      title: "N.A.R.R.O",
+      title: "La Beba",
       artist: "Temple Sour",
-      credits: "—",
+      credits: "Co-producción por Lorenzo Tapia",
     },
     {
       id: 6,

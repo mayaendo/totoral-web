@@ -23,7 +23,7 @@ export default function Team() {
       link: "/moncho",
     },
     {
-      name: "Maya Endo",
+      name: "Maya",
       image: "/images/team/maya.jpg",
       link: "/mayaendo",
     },
@@ -32,7 +32,7 @@ export default function Team() {
   const [hoveredMember, setHoveredMember] = useState<number | null>(null);
 
   return (
-    <section id="equipo" className="py-12 bg-primary text-white">
+    <section id="equipo" className="py-12 text-white">
       <div className="container mx-auto px-4 md:px-16 lg:px-24">
       <div className="text-center mb-16">
           <h2 className="text-4xl font-lora font-bold text-yellow relative inline-block">

@@ -59,7 +59,7 @@ export default function NuestrosServicios() {
 
   return (
     <section
-      className="pt-24 md:pt-28 pb-20 bg-primary text-white"
+      className="pt-24 md:pt-28 pb-20 text-white"
       id="servicios"
     >
       <div className="container mx-auto px-4">
