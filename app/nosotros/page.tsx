@@ -3,13 +3,6 @@
 import Navegacion from "../../components/Navegacion";
 import Footer from "../../components/Footer";
 import Image from "next/image";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Conoce a Nuestro Equipo | Productores e Ingenieros | El Totoral",
-  description:
-    "Conoce al equipo de El Totoral, un estudio de grabación en Lima. Productores, ingenieros y músicos apasionados por la creación musical.",
-};
 
 export default function NosotrosPage() {
   return (

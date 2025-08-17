@@ -7,13 +7,7 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Footer from "../../components/Footer";
 import { FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
-import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Nuestro Estudio de Grabación en Lima | Equipos y Ambiente | El Totoral",
-  description:
-    "Explora nuestro estudio de grabación en Lima. Un espacio creativo con equipos de alta gama, diseñado para la producción musical y la inspiración.",
-};
 
 const galleryItems = [
   { src: "/images/elestudio/estudio_setupescritorio.jpg", alt: "Setup de escritorio del estudio" },
