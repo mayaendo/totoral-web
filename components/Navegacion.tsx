@@ -59,6 +59,14 @@ export default function Navegacion() {
           </li>
           <li>
             <Link 
+              href="/trabajo" 
+              className={`hover:text-yellow ${pathname === '/trabajo' ? 'font-bold text-yellow' : ''}`}
+            >
+              Trabajo
+            </Link>
+          </li>
+          <li>
+            <Link 
               href="/estudio" 
               className={`hover:text-yellow ${pathname === '/estudio' ? 'font-bold text-yellow' : ''}`}
             >
@@ -71,14 +79,6 @@ export default function Navegacion() {
               className={`hover:text-yellow ${pathname === '/servicios' ? 'font-bold text-yellow' : ''}`}
             >
               Servicios
-            </Link>
-          </li>
-          <li>
-            <Link 
-              href="/trabajo" 
-              className={`hover:text-yellow ${pathname === '/trabajo' ? 'font-bold text-yellow' : ''}`}
-            >
-              Trabajo
             </Link>
           </li>
           <li>

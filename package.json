@@ -13,7 +13,9 @@
     "@emailjs/browser": "^4.4.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "imagesloaded": "^5.0.0",
     "lucide-react": "^0.475.0",
+    "masonry-layout": "^4.2.2",
     "next": "^14.2.28",
     "react": "^18",
     "react-dom": "^18",
@@ -22,6 +24,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@types/masonry-layout": "^4.2.8",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

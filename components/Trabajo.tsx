@@ -1,18 +1,17 @@
 "use client";
 
-import { Play } from "lucide-react";
 import AlbumCarousel from "./AlbumCarousel";
-import { FaPlay } from "react-icons/fa";
+import { Play } from "lucide-react";
+
 
 export default function Trabajo() {
   return (
     <section
-      className="relative pt-24 md:pt-28 pb-20 bg-primary text-white overflow-hidden"
+      className="relative pb-20 text-white overflow-hidden"
       id="trabajo"
     >
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary to-primary/95"></div>
         <div className="absolute inset-0 bg-noise opacity-5 mix-blend-soft-light"></div>
         <div className="absolute top-0 left-0 w-full h-full">
           <div className="absolute top-[5%] right-[10%] w-72 h-72 rounded-full bg-yellow/5 blur-3xl"></div>
@@ -77,7 +76,7 @@ export default function Trabajo() {
                   Totoral Music
                 </h4>
                 <p className="font-mono text-white/80">
-                  Una selección de música grabada, mezclada y producida por
+                  Una selección de música grabada, mezclada y/o producida por
                   Lorenzo Tapia & Moncho Berry en El Totoral Studio. Incluye
                   artistas como Jaze, Temple Sour, Moncho Berry, rulolo, Maya
                   Endo y más.
@@ -99,34 +98,6 @@ export default function Trabajo() {
             </div>
           </div>
         </div>
-
-        {/* Testimonios / YouTube Placeholders */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-lora font-semibold text-yellow mb-8 relative inline-block">
-            Testimonios
-            <div className="w-full h-[2px] bg-gradient-to-r from-yellow/50 to-transparent absolute -bottom-2 left-0"></div>
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[1, 2].map((_, idx) => (
-              <div
-                key={idx}
-                className="bg-primary/30 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-white/10 relative overflow-hidden h-64 flex items-center justify-center"
-              >
-                <div className="text-center text-white/70 font-mono text-lg relative z-10">
-                  <FaPlay className="mx-auto text-yellow text-4xl mb-3 opacity-80" />
-                  Video testimonial próximamente
-                </div>
-                <div className="absolute top-4 left-4 opacity-10 text-6xl font-serif text-yellow">
-                  &quot;
-                </div>
-                <div className="absolute bottom-4 right-4 opacity-10 text-6xl font-serif text-yellow">
-                  &quot;
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Album Carousel */}
         <div className="mb-2">
           <h3 className="text-2xl font-lora font-semibold text-yellow mb-8 relative inline-block">

@@ -11,7 +11,7 @@ export default function Moncho() {
         <div className="flex-shrink-0 w-full md:w-1/2">
           <Image
             src="/images/team/moncho.jpg"
-            alt="Moncho Yriberry - El Totoral"
+            alt="Moncho Berry - El Totoral"
             width={600}
             height={800}
             className="rounded-lg shadow-xl object-cover w-full h-auto"
@@ -21,7 +21,7 @@ export default function Moncho() {
         {/* Descripción */}
         <div className="md:w-1/2 space-y-6">
           <h1 className="text-4xl font-lora font-bold text-yellow">
-            Moncho Yriberry
+            Moncho Berry
           </h1>
           <p className="text-lg font-lora leading-relaxed">
             Conoce a Simon Yriberry{" "}

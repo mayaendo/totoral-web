@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function NosotrosPage() {
   return (
-    <main className="bg-primary text-white overflow-hidden">
+    <main className="bg-gradient-to-b from-[#65524D] to-[#3a2a26] text-white overflow-hidden">
       <Navegacion />
 
       <section className="pt-36 md:pt-40 pb-16">
@@ -16,28 +16,6 @@ export default function NosotrosPage() {
               Nosotros
               <div className="w-full h-[3px] bg-gradient-to-r from-transparent via-yellow/70 to-transparent absolute -bottom-4 left-0" />
             </h1>
-          </div>
-
-          {/* Filosofía */}
-          <div className="max-w-4xl mx-auto text-center mb-20">
-            <p className="text-lg md:text-xl font-lora leading-relaxed">
-              En <span className="text-yellow drop-shadow-sm">El Totoral</span>,
-              creemos que la música es más que sonido; es una expresión del alma
-              que merece ser capturada con autenticidad y pasión. Nuestro
-              estudio combina{" "}
-              <span className="text-yellow drop-shadow-sm">
-                calidad técnica
-              </span>
-              ,{" "}
-              <span className="text-yellow drop-shadow-sm">
-                ambiente creativo
-              </span>{" "}
-              y{" "}
-              <span className="text-yellow drop-shadow-sm">
-                colaboración genuina
-              </span>{" "}
-              para crear experiencias sonoras que perduran en el tiempo.
-            </p>
           </div>
 
           {/* Imagen grupal */}
@@ -127,7 +105,7 @@ export default function NosotrosPage() {
               />
               <div className="md:w-1/2 space-y-4">
                 <h3 className="text-2xl font-lora font-bold text-yellow">
-                  Maya Endo
+                  Maya
                 </h3>
                 <p className="text-base font-lora leading-relaxed">
                   Cantante y compositora, Maya es el corazón creativo de El

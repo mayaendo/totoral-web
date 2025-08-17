@@ -42,20 +42,20 @@ export default function Contacto() {
       to_email: "maya.endo.o@gmail.com",
       from_name: formData.nombre,
       from_email: formData.email,
-      telefono: formData.telefono,
-      necesidad:
+      phone: formData.telefono,
+      service:
         formData.necesidad === "Otro"
           ? formData.necesidadOtra
           : formData.necesidad,
-      mensaje: formData.mensaje || "No se proporcionó mensaje adicional.",
+      message: formData.mensaje || "No se proporcionó mensaje adicional.",
     };
 
     try {
       // Replace these with your actual EmailJS service ID, template ID, and public key
       // You'll need to sign up at https://www.emailjs.com/ and create a template
-      const serviceId = "service_ontos45"; // Replace with your service ID
-      const templateId = "template_mxtygnl"; // Replace with your template ID
-      const publicKey = "9c-LD5zT9iheAYVZr"; // Replace with your public key
+      const serviceId = "service_9wd1dkc"; // Replace with your service ID
+      const templateId = "template_uiiorln"; // Replace with your template ID
+      const publicKey = "bqRqK0OnNw2j30ck9"; // Replace with your public key
 
       // Send the email using EmailJS
       const result = await emailjs.send(
@@ -101,7 +101,7 @@ export default function Contacto() {
 
   return (
     <section
-      className="pt-24 md:pt-28 pb-16 bg-primary text-white"
+      className="pt-24 md:pt-28 pb-16 text-white"
       id="contacto"
     >
       <div className="container mx-auto px-4 md:px-8">

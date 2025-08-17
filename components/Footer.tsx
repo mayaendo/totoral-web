@@ -68,9 +68,6 @@ export default function Footer() {
               @eltotoralstudio
             </a>
           </div>
-          <a href="mailto:hola@eltotoral.pe" className="hover:text-[#ffee8d]">
-            hola@eltotoral.pe
-          </a>
         </div>
       </div>
 
